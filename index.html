@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MJ Creative Studio – Luxury Visual Branding & Graphic Content Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="MJ Creative Studio crafts clean, modern, editorial-inspired visual branding and graphic content for healthcare clinics, small businesses, and marketing agencies."
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #fdf4f8;           /* light blush pink */
+      --bg-soft-alt: #fff9fb;
+      --accent: #f59fbf;           /* soft rose pink */
+      --accent-soft: rgba(245, 159, 191, 0.16);
+      --accent-2: #fbbf77;         /* warm soft gold */
+      --gold: #c89c3d;             /* luxe gold */
+      --text: #111111;             /* deep charcoal */
+      --muted: #737373;            /* subtle gray */
+      --border: rgba(229, 231, 235, 0.9);
+      --radius-xl: 18px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.06);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at top, #fdf4f8 0, #ffffff 40%, #ffffff 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+      gap: 1.25rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 25% 20%, #ffffff 0, #f9d3e3 25%, #f59fbf 50%, #fbbf77 80%);
+      box-shadow:
+        0 0 14px rgba(245, 159, 191, 0.4),
+        0 0 28px rgba(251, 191, 119, 0.35);
+      border: 0.5px solid rgba(200, 156, 61, 0.55);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-name {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      padding-bottom: 0.18rem;
+      border-bottom: 1px solid transparent;
+      transition: color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      border-color: rgba(17, 17, 17, 0.85);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      background: #111111;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 0.86rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid #111111;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      padding: 4.2rem 0 3.8rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 3.25rem;
+      align-items: center;
+    }
+
+    @media (max-width: 880px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.18rem 0.75rem;
+      border-radius: 999px;
+      background: #fff9fb;
+      border: 1px solid rgba(245, 194, 212, 0.8);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.3rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      margin-bottom: 1.1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 span.highlight {
+      background: linear-gradient(120deg, #111111, #f59fbf, #c89c3d);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 0.96rem;
+      color: var(--muted);
+      max-width: 34rem;
+      line-height: 1.8;
+      margin-bottom: 1.7rem;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-bottom: 2.15rem;
+    }
+
+    .badge {
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.7rem;
+      color: var(--muted);
+      background: #ffffff;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      padding: 0.85rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      background: #111111;
+      color: #ffffff;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      padding: 0.78rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 400;
+      border: 1px solid rgba(209, 213, 219, 1);
+      background: #ffffff;
+      color: var(--muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-secondary span.arrow {
+      font-size: 1.1rem;
+      transform: translateY(1px);
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-panel {
+      border-radius: 22px;
+      padding: 1.5rem 1.5rem 1.7rem;
+      background: linear-gradient(145deg, #ffffff, #fdf4f8);
+      border: 1px solid rgba(245, 194, 212, 0.8);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.15rem;
+    }
+
+    .hero-panel-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .hero-panel-title small {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .hero-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      background: #ffffff;
+      border: 0.5px solid rgba(209, 213, 219, 1);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #4b5563;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .service-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .service-mini {
+      padding: 0.75rem;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid rgba(229, 231, 235, 1);
+      font-size: 0.78rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .service-mini strong {
+      font-weight: 500;
+      font-size: 0.82rem;
+    }
+
+    .service-mini span {
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    .hero-kpi-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.15rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(229, 231, 235, 0.9);
+      padding-top: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
+    .hero-kpi {
+      display: flex;
+      flex-direction: column;
+      gap: 0.12rem;
+    }
+
+    .hero-kpi strong {
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .hero-kpi-label {
+      font-size: 0.72rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 3.4rem 0;
+    }
+
+    section:nth-of-type(even) {
+      background: linear-gradient(to bottom, #ffffff 0, #fff9fb 40%, #ffffff 100%);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+      margin-bottom: 2.1rem;
+      border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+      padding-bottom: 1.3rem;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 22rem;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 720px) {
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Services grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 980px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .service-card {
+      padding: 1.25rem 1.25rem 1.4rem;
+      border-radius: var(--radius-xl);
+      background: #ffffff;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      opacity: 0.05;
+      background: radial-gradient(circle at top left, var(--gold), transparent 55%);
+      pointer-events: none;
+    }
+
+    .service-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 0.5px solid rgba(245, 194, 212, 0.8);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .service-title {
+      font-size: 0.98rem;
+      font-weight: 500;
+    }
+
+    .service-text {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 0.35rem;
+    }
+
+    .service-meta {
+      margin-top: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .service-meta span {
+      display: inline-block;
+      padding: 0.08rem 0.5rem;
+      border-radius: 999px;
+      background: #fdf4f8;
+      border: 0.5px solid rgba(245, 194, 212, 0.9);
+      margin-right: 0.3rem;
+      margin-top: 0.25rem;
+      font-size: 0.74rem;
+    }
+
+    /* Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    @media (max-width: 960px) {
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .process-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .process-step {
+      padding: 1.05rem 1.05rem 1.2rem;
+      border-radius: var(--radius-xl);
+      border: 1px dashed rgba(209, 213, 219, 1);
+      background: #ffffff;
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .step-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .step-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .step-text {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* About */
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.6rem;
+    }
+
+    @media (max-width: 880px) {
+      .about-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .about-copy {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.9;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .about-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.4rem;
+    }
+
+    .about-pill {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(209, 213, 219, 1);
+      color: var(--muted);
+      background: #ffffff;
+    }
+
+    .about-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(245, 194, 212, 0.9);
+      background: linear-gradient(145deg, #ffffff, #fdf4f8);
+      padding: 1.5rem 1.5rem 1.7rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.87rem;
+    }
+
+    .about-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .about-small-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .about-small-row strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.86rem;
+      margin-bottom: 0.18rem;
+    }
+
+    /* Audience / Differentiators */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.1rem;
+    }
+
+    @media (max-width: 880px) {
+      .audience-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .audience-list,
+    .diff-list {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .audience-list ul,
+    .diff-list ul {
+      margin-top: 0.6rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .audience-list li,
+    .diff-list li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .audience-list li::before,
+    .diff-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+      font-size: 0.9rem;
+    }
+
+    /* Packages */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 980px) {
+      .packages-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .packages-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .package-card {
+      padding: 1.4rem 1.4rem 1.6rem;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .package-name {
+      font-family: "Playfair Display", serif;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .package-tag {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .package-price {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #111111;
+    }
+
+    .package-price span {
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .package-list {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.7;
+      list-style: none;
+      padding-left: 0;
+      margin: 0.2rem 0 0.3rem;
+    }
+
+    .package-list li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .package-list li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .package-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    .add-ons {
+      margin-top: 1.8rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .add-ons strong {
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+
+    .add-ons ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.4rem;
+    }
+
+    .add-ons li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .add-ons li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+    }
+
+    /* Contact */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: 2.3rem;
+    }
+
+    @media (max-width: 880px) {
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .contact-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .contact-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .contact-meta a {
+      color: #111111;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    form {
+      border-radius: 20px;
+      padding: 1.6rem 1.5rem 1.8rem;
+      border: 1px solid rgba(209, 213, 219, 1);
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .field label {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      border-radius: 12px;
+      border: 1px solid rgba(209, 213, 219, 1);
+      padding: 0.6rem 0.7rem;
+      background: #ffffff;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(245, 159, 191, 0.35);
+      background: #fff9fb;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.9rem;
+      margin-top: 0.8rem;
+    }
+
+    .form-helper {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .form-footer .btn-primary {
+      letter-spacing: 0.12em;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(229, 231, 235, 1);
+      padding: 1.5rem 0 1.8rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: #ffffff;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <header>
+      <div class="shell">
+        <nav class="nav">
+          <a class="brand" href="#top">
+            <span class="brand-mark"></span>
+            <span class="brand-text">
+              <span class="brand-name">MJ Creative Studio</span>
+              <span class="brand-tagline">Luxury visual branding & graphics</span>
+            </span>
+          </a>
+
+          <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#audience">Clients</a>
+            <a href="#packages">Packages</a>
+            <a href="#contact" class="nav-cta">Enquire</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main id="top">
+      <section class="hero">
+        <div class="shell">
+          <div class="hero-grid">
+            <div class="hero-left">
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                Luxury visual branding & graphic content studio
+              </div>
+
+              <h1>
+                Editorial-inspired <span class="highlight">branding & graphics</span>
+                for clinics & small businesses.
+              </h1>
+
+              <p class="hero-sub">
+                MJ Creative Studio crafts clean, modern, editorial-inspired visual branding
+                and marketing assets—including healthcare-specific educational graphics—
+                helping clinics, small businesses, and marketing agencies communicate their
+                story with elegance, clarity, and authority.
+              </p>
+
+              <div class="badge-row">
+                <span class="badge">Luxury visual branding</span>
+                <span class="badge">Graphic content & data storytelling</span>
+                <span class="badge">Healthcare education design</span>
+              </div>
+
+              <div class="hero-actions">
+                <a href="#contact" class="btn-primary">Book a consultation</a>
+                <a href="#services" class="btn-secondary">
+                  View services <span class="arrow">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-right">
+              <div class="hero-panel">
+                <div class="hero-panel-header">
+                  <div class="hero-panel-title">
+                    <span>Built for thoughtful, service-based brands</span>
+                    <small>Especially healthcare clinics & small businesses</small>
+                  </div>
+                  <div class="hero-status-pill">
+                    <span class="status-dot"></span>
+                    <span>Accepting new projects</span>
+                  </div>
+                </div>
+
+                <div class="service-mini-grid">
+                  <div class="service-mini">
+                    <strong>Visual graphics & templates</strong>
+                    <span>Social graphics, carousels, infographics and template packs.</span>
+                  </div>
+                  <div class="service-mini">
+                    <strong>Branding design</strong>
+                    <span>Mood boards, palettes, typography and brand kits.</span>
+                  </div>
+                  <div class="service-mini">
+                    <strong>Healthcare education</strong>
+                    <span>Patient-friendly educational and procedural graphics.</span>
+                  </div>
+                  <div class="service-mini">
+                    <strong>Data & trend visuals</strong>
+                    <span>Statistical visuals, comparisons, rankings and timelines.</span>
+                  </div>
+                </div>
+
+                <div class="hero-kpi-row">
+                  <div class="hero-kpi">
+                    <strong>Clean & modern</strong>
+                    <span class="hero-kpi-label">Editorial style, calm color stories</span>
+                  </div>
+                  <div class="hero-kpi">
+                    <strong>Monthly or à la carte</strong>
+                    <span class="hero-kpi-label">Flexible packages & one-off projects</span>
+                  </div>
+                  <div class="hero-kpi">
+                    <strong>Agency-friendly</strong>
+                    <span class="hero-kpi-label">White-label support for marketing teams</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- /hero-grid -->
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services">
+        <div class="shell">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Studio services</h2>
+              <p class="section-subtitle">
+                A focused set of luxury visual branding and graphic content services
+                designed to support clinics, small businesses and marketing teams.
+              </p>
+            </div>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon">🎨</div>
+              <h3 class="service-title">Visual Graphics & Social Content</h3>
+              <p class="service-text">
+                Clean, on-brand graphics for your day-to-day communication:
+                social media graphics, carousels, infographics and plug-and-play template packs.
+              </p>
+              <div class="service-meta">
+                <span>Social graphics & carousels</span>
+                <span>Infographics & template packs</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">✨</div>
+              <h3 class="service-title">Branding Design</h3>
+              <p class="service-text">
+                Editorial-inspired brand foundations: mood boards, color palettes,
+                typography, mini and full brand kits, plus concise brand guides for your team.
+              </p>
+              <div class="service-meta">
+                <span>Mood boards & palettes</span>
+                <span>Mini/full brand kits & guides</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">📄</div>
+              <h3 class="service-title">Marketing Assets</h3>
+              <p class="service-text">
+                High-end print and digital marketing collateral, including flyers,
+                brochures, one-pagers, presentation slide decks and email graphics.
+              </p>
+              <div class="service-meta">
+                <span>Flyers & brochures</span>
+                <span>One-pagers & slide decks</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🏥</div>
+              <h3 class="service-title">Healthcare Education Graphics</h3>
+              <p class="service-text">
+                Patient education graphics, procedural infographics, wellness tips
+                and instructional guides designed to be approachable and easy to understand.
+              </p>
+              <div class="service-meta">
+                <span>Patient education visuals</span>
+                <span>Procedural & wellness graphics</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">📊</div>
+              <h3 class="service-title">Data Storytelling & Analytics Visuals</h3>
+              <p class="service-text">
+                Statistical analysis visuals, demographic breakdowns, engagement metrics,
+                comparisons, rankings and trend timelines—translated into clear, elegant graphics.
+              </p>
+              <div class="service-meta">
+                <span>Statistical & KPI visuals</span>
+                <span>Comparisons, rankings & timelines</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🧠</div>
+              <h3 class="service-title">Creative Direction & Content Ideas</h3>
+              <p class="service-text">
+                Campaign concepts, monthly content ideas and brand messaging frameworks
+                to keep your visuals and language working together.
+              </p>
+              <div class="service-meta">
+                <span>Campaign concepts</span>
+                <span>Brand messaging frameworks</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process">
+        <div class="shell">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">A calm, guided process</h2>
+              <p class="section-subtitle">
+                No jargon, no overwhelm. Just a thoughtful, editorial approach to your
+                branding and graphic content.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-step">
+              <span class="step-label">Step 01</span>
+              <h3 class="step-title">Discovery</h3>
+              <p class="step-text">
+                A focused call to understand your clinic or business, your audience,
+                your current materials and what you’d like to change.
+              </p>
+            </div>
+            <div class="process-step">
+              <span class="step-label">Step 02</span>
+              <h3 class="step-title">Direction</h3>
+              <p class="step-text">
+                A concise creative direction—mood boards, color palettes and references—
+                so you can see the vision before we design.
+              </p>
+            </div>
+            <div class="process-step">
+              <span class="step-label">Step 03</span>
+              <h3 class="step-title">Design & Refinement</h3>
+              <p class="step-text">
+                We build out your branding, graphics and key assets, then refine through
+                collaborative feedback until everything feels aligned.
+              </p>
+            </div>
+            <div class="process-step">
+              <span class="step-label">Step 04</span>
+              <h3 class="step-title">Delivery & Support</h3>
+              <p class="step-text">
+                Final files, template packs and simple guidance. Continue with monthly
+                support or à la carte projects as needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About / Mission -->
+      <section id="about">
+        <div class="shell">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Studio & mission</h2>
+              <p class="section-subtitle">
+                Quietly confident design for brands that care about the details.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-layout">
+            <div class="about-copy">
+              <p>
+                The mission of MJ Creative Studio is simple: to craft clean, modern,
+                editorial-inspired visual branding and marketing assets—especially
+                healthcare-specific educational graphics—that help you communicate
+                with elegance, clarity and authority.
+              </p>
+              <p>
+                Instead of loud trends or busy layouts, the focus is on calm color
+                stories, generous white space and typography that feels refined yet
+                approachable. The goal is to make your brand feel as considered as the
+                service and care you provide.
+              </p>
+              <p>
+                Whether you work directly with the studio or through a white-label
+                partnership, you receive polished, practical deliverables that can be
+                implemented across your existing touchpoints without a full rebuild.
+              </p>
+              <div class="about-pill-row">
+                <span class="about-pill">Luxury-inspired visual style</span>
+                <span class="about-pill">Graphic-first (no video)</span>
+                <span class="about-pill">Healthcare-aware, patient-friendly design</span>
+              </div>
+            </div>
+
+            <aside class="about-card">
+              <h3>How we work best</h3>
+              <p>
+                Clear scope, thoughtful timelines and space for honest feedback. You
+                bring the vision for your clinic, brand or client; MJ Creative Studio
+                translates it into a cohesive visual language.
+              </p>
+
+              <div class="about-small-row">
+                <div>
+                  <strong>Revenue model</strong>
+                  Tiered monthly packages for recurring support, plus à la carte
+                  services for single projects and agency partnerships.
+                </div>
+                <div>
+                  <strong>Ideal collaborations</strong>
+                  Healthcare clinics, wellness centers, small service-based businesses
+                  and marketing agencies seeking high-end, white-label graphic design.
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Audience & Differentiators -->
+      <section id="audience">
+        <div class="shell">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Who we serve</h2>
+              <p class="section-subtitle">
+                A studio built for real-world practices, small teams and agencies.
+              </p>
+            </div>
+          </div>
+
+          <div class="audience-grid">
+            <div class="audience-list">
+              <p>Primary audiences for MJ Creative Studio include:</p>
+              <ul>
+                <li>Healthcare clinics, wellness centers and medical offices.</li>
+                <li>Small business owners—boutiques, med spas and service-based brands.</li>
+                <li>Marketing agencies seeking luxury, white-label design support.</li>
+              </ul>
+            </div>
+
+            <div class="diff-list">
+              <p>Key differentiators:</p>
+              <ul>
+                <li>High-end editorial visual style: sophisticated, clean, modern design.</li>
+                <li>Luxury branding without video content—focused solely on graphics and marketing assets.</li>
+                <li>Healthcare-focused educational and marketing expertise with patient-friendly, HIPAA-conscious design awareness.</li>
+                <li>Flexible design packages and à la carte options to match your pace and budget.</li>
+                <li>White-label services tailored for agencies and in-house marketing teams.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Packages -->
+      <section id="packages">
+        <div class="shell">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Luxury monthly packages</h2>
+              <p class="section-subtitle">
+                Choose a tier that matches your current demand. All packages can be combined
+                with à la carte projects as needed.
+              </p>
+            </div>
+          </div>
+
+          <div class="packages-grid">
+            <!-- Luxe Essentials -->
+            <article class="package-card">
+              <div>
+                <div class="package-name">Luxe Essentials</div>
+                <div class="package-tag">Foundational monthly support</div>
+              </div>
+              <div class="package-price">
+                $350–$550<span>/ month</span>
+              </div>
+              <ul class="package-list">
+                <li>8 custom graphics.</li>
+                <li>2 carousel posts.</li>
+                <li>1 mini mood board.</li>
+                <li>1 marketing asset (flyer, menu or one-pager).</li>
+                <li>Optional: 1 healthcare educational graphic.</li>
+                <li>Brand-aligned color and font styling.</li>
+              </ul>
+              <p class="package-note">
+                Ideal for clinics and small businesses wanting consistent, elevated visuals each month.
+              </p>
+            </article>
+
+            <!-- Editorial Branding Suite -->
+            <article class="package-card">
+              <div>
+                <div class="package-name">Editorial Branding Suite</div>
+                <div class="package-tag">Deeper brand presence</div>
+              </div>
+              <div class="package-price">
+                $650–$1,000<span>/ month</span>
+              </div>
+              <ul class="package-list">
+                <li>12 graphics.</li>
+                <li>4 carousels.</li>
+                <li>Mini brand kit (palette, typography, tone).</li>
+                <li>2 marketing assets.</li>
+                <li>2 healthcare educational graphics.</li>
+                <li>Monthly content/campaign concept & direction.</li>
+              </ul>
+              <p class="package-note">
+                Perfect for growing practices and brands ready for more consistent, editorial-style visuals.
+              </p>
+            </article>
+
+            <!-- Signature Creative Package -->
+            <article class="package-card">
+              <div>
+                <div class="package-name">Signature Creative Package</div>
+                <div class="package-tag">Full luxury support</div>
+              </div>
+              <div class="package-price">
+                $1,200–$2,200<span>/ month</span>
+              </div>
+              <ul class="package-list">
+                <li>16–20 graphics.</li>
+                <li>6 carousels.</li>
+                <li>Full brand identity refresh (visual kit + messaging guide).</li>
+                <li>3 marketing assets.</li>
+                <li>4–6 healthcare educational graphics.</li>
+                <li>Monthly campaign & creative direction.</li>
+                <li>Presentation/slide deck design as needed.</li>
+              </ul>
+              <p class="package-note">
+                Best for clinics, groups and agencies needing a dedicated, ongoing creative partner.
+              </p>
+            </article>
+          </div>
+
+          <div class="add-ons">
+            <strong>Optional add-ons:</strong>
+            <ul>
+              <li>Extra revisions: $15–$25.</li>
+              <li>Rush delivery: +$25–$75.</li>
+              <li>Alternate color variants: +$15.</li>
+              <li>Raw design files: +$40–$100.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="shell">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Start a project</h2>
+              <p class="section-subtitle">
+                Share a little about your clinic, business or client and the type of
+                visual support you’re seeking.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-layout">
+            <div class="contact-note">
+              <p>
+                Whether you’re interested in a monthly package, an à la carte project
+                or white-label support for your agency, this is the best place to begin.
+              </p>
+              <p class="contact-meta">
+                Prefer email? Reach out at
+                <!-- 👉 Replace this with your real email -->
+                <a href="mailto:hello@mjcreativestudio.com">hello@mjcreativestudio.com</a>
+                and include any links to your current website, materials or analytics you’d like to visualize.
+              </p>
+              <p class="contact-meta">
+                Typical response time: within 1–2 business days.
+              </p>
+            </div>
+
+            <!-- NOTE: Replace `action="#"` with your form endpoint (e.g. Formspree, backend, etc.) -->
+            <form action="#" method="post">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Name *</label>
+                  <input id="name" name="name" type="text" required />
+                </div>
+                <div class="field">
+                  <label for="email">Email *</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+                <div class="field">
+                  <label for="company">Clinic / Business / Agency name</label>
+                  <input id="company" name="company" type="text" />
+                </div>
+                <div class="field">
+                  <label for="service">What are you most interested in? *</label>
+                  <select id="service" name="service" required>
+                    <option value="">Select an option</option>
+                    <option>Luxe Essentials package</option>
+                    <option>Editorial Branding Suite</option>
+                    <option>Signature Creative Package</option>
+                    <option>À la carte project</option>
+                    <option>White-label agency support</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="industry">Industry (optional)</label>
+                <select id="industry" name="industry">
+                  <option value="">Select an option</option>
+                  <option>Healthcare / Medical Clinic</option>
+                  <option>Wellness / Therapy</option>
+                  <option>Professional Services</option>
+                  <option>Retail / Hospitality</option>
+                  <option>Other small business</option>
+                  <option>Marketing / Creative Agency</option>
+                </select>
+              </div>
+
+              <div class="field" style="margin-top: 0.9rem;">
+                <label for="message">Tell us about your project *</label>
+                <textarea id="message" name="message" required
+                  placeholder="Where are you now with your branding and graphics, and what would you like to feel different or clearer?"></textarea>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" class="btn-primary">
+                  Submit enquiry
+                </button>
+                <p class="form-helper">
+                  By submitting, you agree to be contacted about your project.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="shell">
+        <div class="footer-inner">
+          <span>© <span id="year"></span> MJ Creative Studio. All rights reserved.</span>
+          <span>Quietly confident, carefully considered branding.</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
